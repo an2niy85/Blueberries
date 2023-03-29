@@ -1,0 +1,18 @@
+.breadcrumb > li {
+    display: inline; /*горизонтальное расположение*/
+  }
+  
+  .breadcrumb li.location + li.location::before {
+    content: "/"; /*установим разделитель '/' + только для местоположения*/
+  }
+  
+  .breadcrumb li.attribute a {
+    color: gray;
+  }
+  
+  .breadcrumb li.attribute::after {
+    content: "x";/*разделитель после атрибута*/
+    color: red;
+    font-size: 10px;
+    vertical-align: super;
+  }
